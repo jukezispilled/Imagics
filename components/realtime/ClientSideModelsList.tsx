@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaImages } from "react-icons/fa";
 import ModelsTable from "../ModelsTable";
+import LogoutButton from "@/components/LogoutButton";
 
 type ClientSideModelsListProps = {
   serverModels: modelRowWithSamples[] | [];
@@ -57,13 +58,16 @@ export default function ClientSideModelsList({
     <div id="train-model-container" className="w-full p-8">
       {models && models.length > 0 && (
         <div className="flex flex-col gap-4">
-          <div className="flex flex-row gap-4 w-full justify-between items-center text-center">
-            <h1>Your models</h1>
-            <Link href="/overview/models/train">
-              <Button className="ml-4" size={"sm"}>
-                Train model
-              </Button>
-            </Link>
+          <div className="flex flex-row gap-4 w-full justify-between items-center text-center mt-4 mb-6">
+            <h1 className="text-3xl font-bold">Your models</h1>
+            <div className="flex gap-3">
+              <Link href="/overview/models/train">
+                <Button className="ml-4 text-sm" size={"sm"}>
+                  Train model
+                </Button>
+              </Link>
+              <LogoutButton />
+            </div>
           </div>
           <ModelsTable models={models} />
         </div>

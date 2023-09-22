@@ -21,6 +21,7 @@ export default async function RootLayout({
           {children}
         </main>
         <Toaster />
+        <Footer />
       </body>
     </html>
   );

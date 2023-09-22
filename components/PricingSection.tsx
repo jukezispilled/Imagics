@@ -3,83 +3,133 @@ import { Button } from "./ui/button";
 
 export default function PricingSection() {
   return (
-    <div className="w-full mt-16 mb-16 p-8 rounded-lg space-y-8">
-      <h2 className="text-[56px] font-bold text-center mb-8">Pricing</h2>
-      <div className="flex flex-wrap justify-center lg:space-x-4 space-y-4 lg:space-y-0 items-stretch">
-        {pricingOptions.map((option, index) => (
-          <div
-            key={index}
-            className={`flex flex-col border border-[#d977ff] rounded-lg p-4 w-full lg:w-1/4 ${option.bgColor}`}
-          >
-            <div className="flex-grow space-y-4">
-              <h3 className="text-2xl font-semibold text-center">
-                {option.title}
-              </h3>
-              <p className="text-xl font-bold text-center mb-2">
-                {option.price}
-              </p>
-              <p className="text-sm text-gray-600 text-center">
-                {option.description}
-              </p>
-              <ul className="space-y-2 mb-4 pl-4">
-                {option.features.map((feature, fIndex) => (
-                  <li key={fIndex} className="flex items-center space-x-2">
-                    <span className="text-green-500">✔</span>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
+      <div className="w-full my-28 rounded-lg space-y-8">
+        <h2 className="text-[56px] font-bold text-center animate-text bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 bg-clip-text text-transparent">Pricing</h2>
+      <div className="bg-white dark:bg-gray-900">
+        <div className="container px-10 py-2 mx-auto">
+            <div className="flex flex-col items-center justify-center space-y-8 lg:-mx-4 lg:flex-row lg:items-stretch lg:space-y-0">
+                <div className="hover:scale-[101.5%] transition ease-in duration-200 flex flex-col w-full max-w-sm p-8 space-y-8 text-center bg-white border-2 border-gray-200 rounded-lg lg:mx-4 dark:bg-gray-900 dark:border-gray-700">
+                    <div className="flex-shrink-0">
+                        <h2 className="text-xl inline-flex items-center justify-center px-2 font-semibold tracking-tight text-blue-400 uppercase rounded-lg bg-gray-50 dark:bg-gray-700">
+                            Starter
+                        </h2>
+                    </div>
+
+                    <div className="flex-shrink-0">
+                        <span className="pt-2 text-3xl font-bold text-gray-800 uppercase dark:text-gray-100">
+                            $24.90
+                        </span>
+                        
+                        <span className="text-gray-500 dark:text-gray-400">
+                            /month
+                        </span>
+                    </div>
+
+                    <ul className="flex-1 space-y-4">
+                        <li className="text-gray-500 dark:text-gray-400">
+                            Up to 5 projects
+                        </li>
+
+                        <li className="text-gray-500 dark:text-gray-400">
+                            Up to 10 collaborators
+                        </li>
+
+                        <li className="text-gray-500 dark:text-gray-400">
+                            2Gb of storage
+                        </li>
+                    </ul>
+
+                    <button className="inline-flex items-center justify-center px-4 py-2 font-medium text-white uppercase transition-colors bg-blue-500 rounded-lg hover:bg-blue-700 focus:outline-none">
+                        Start free
+                    </button>
+                </div>
+
+                <div className="hover:scale-[101.5%] transition ease-in duration-200 flex flex-col w-full max-w-sm p-8 space-y-8 text-center bg-blue-600 border-2 border-blue-600 rounded-lg lg:mx-4 dark:bg-gray-900 dark:border-gray-700">
+                    <div className="flex-shrink-0">
+                        <h2 className="text-xl inline-flex items-center justify-center px-2 font-semibold tracking-tight text-blue-500 uppercase rounded-lg bg-white dark:bg-gray-700">
+                          Basic
+                        </h2>
+                    </div>
+
+                    <div className="flex-shrink-0">
+                        <span className="pt-2 text-3xl font-bold text-gray-200 uppercase dark:text-gray-100">
+                            $24.90
+                        </span>
+                        
+                        <span className="text-slate-200 dark:text-gray-400">
+                            /month
+                        </span>
+                    </div>
+
+                    <ul className="flex-1 space-y-4">
+                        <li className="text-slate-200 dark:text-gray-400">
+                            Up to 10 projects
+                        </li>
+
+                        <li className="text-slate-200 dark:text-gray-400">
+                            Up to 20 collaborators
+                        </li>
+
+                        <li className="text-slate-200 dark:text-gray-400">
+                            10Gb of storage
+                        </li>
+
+                        <li className="text-slate-200 dark:text-gray-400">
+                            Real-time collaborations
+                        </li>
+                    </ul>
+
+                    <button className="inline-flex items-center justify-center px-4 py-2 font-medium text-blue-500 uppercase transition-colors bg-slate-50 rounded-lg hover:bg-slate-200">
+                        Start free trial
+                    </button>
+                </div>
+
+                <div className="hover:scale-[101.5%] transition ease-in duration-200 flex flex-col w-full max-w-sm p-8 space-y-8 text-center bg-white border-2 border-gray-200 rounded-lg lg:mx-4 dark:bg-gray-900 dark:border-gray-700">
+                    <div className="flex-shrink-0">
+                        <h2 className="text-xl inline-flex items-center justify-center px-2 font-semibold tracking-tight text-blue-400 uppercase rounded-lg bg-gray-50 dark:bg-gray-700">
+                            Premium
+                        </h2>
+                    </div>
+
+                    <div className="flex-shrink-0">
+                        <span className="pt-2 text-3xl font-bold text-gray-800 uppercase dark:text-gray-100">
+                            $49.90
+                        </span>
+
+                        <span className="text-gray-500 dark:text-gray-400">
+                            /month
+                        </span>
+                    </div>
+
+                    <ul className="flex-1 space-y-4">
+                        <li className="text-gray-500 dark:text-gray-400">
+                            Unlimited projects
+                        </li>
+                        
+                        <li className="text-gray-500 dark:text-gray-400">
+                            Unlimited collaborators
+                        </li>
+                        
+                        <li className="text-gray-500 dark:text-gray-400">
+                            Unlimited storage
+                        </li>
+                        
+                        <li className="text-gray-500 dark:text-gray-400">
+                            Real-time collaborations
+                        </li>
+                        
+                        <li className="text-gray-500 dark:text-gray-400">
+                            24x7 Support
+                        </li>
+                    </ul>
+
+                    <button className="inline-flex items-center justify-center px-4 py-2 font-medium text-white uppercase transition-colors bg-blue-500 rounded-lg hover:bg-blue-700 focus:outline-none">
+                        Start free trial
+                    </button>
+                </div>
             </div>
-            <div className="mt-10 text-center">
-              <Link href="/login">
-                {" "}
-                <Button className="w-3/4 bg-[#d25eff] hover:bg-[#c42dff] transition ease-in duration-200">{option.buttonText}</Button>
-              </Link>
-            </div>
-          </div>
-        ))}
+        </div>
       </div>
     </div>
   );
 }
-
-const pricingOptions = [
-  {
-    title: "Starter",
-    price: "$9.99/month",
-    description:
-      "Perfect for individuals looking to enhance their online presence.",
-    features: [
-      "5 AI Headshots",
-      "Standard Resolution Downloads",
-      "Personal Use License",
-    ],
-    buttonText: "Choose Starter",
-    bgColor: "bg-[#fbf1ff]",
-  },
-  {
-    title: "Basic",
-    price: "$19.99/month",
-    description:
-      "Ideal for professionals requiring frequent updates to their profiles.",
-    features: [
-      "15 AI Headshots",
-      "High-Resolution Downloads",
-      "Commercial Use License",
-    ],
-    buttonText: "Choose Basic",
-    bgColor: "bg-[#f2d1ff]",
-  },
-  {
-    title: "Premium",
-    price: "$29.99/month",
-    description: "The best value with unlimited possibilities.",
-    features: [
-      "150 AI Headshots",
-      "Ultra High-Resolution Downloads",
-      "Extended Commercial Use License",
-    ],
-    buttonText: "Choose Premium",
-    bgColor: "bg-[#fbf1ff]",
-  },
-];
