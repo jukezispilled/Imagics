@@ -6,9 +6,9 @@ export default function ExplainerSection() {
   return (
     <div>
       <div className="w-screen">
-          <div className="h-min py-20 bg-slate-100 border border-slate-300 mx-8 lg:mx-16 rounded-lg">
+          <div className="h-min py-20 bg-slate-100 border border-slate-300 mx-8 lg:mx-32 rounded-lg">
             <div className="mb-8">
-              <h2 className="text-[56px] font-extrabold text-center outline-2 mb-1 p-2">How it Works Motherfucker</h2>
+              <h2 className="text-[56px] font-extrabold text-center outline-2 mb-1 p-2">How it Works</h2>
 
               {/* Step 1: Upload your images */}
               <div className="space-y-6 pb-4">
